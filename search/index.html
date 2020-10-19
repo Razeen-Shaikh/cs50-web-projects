@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search</title>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container-fluid d-flex align-items-center justify-content-end m-2">
+            <a class="mr-3 p-2" href="image-search.html">Image Search</a>
+            <a class="mr-3 p-2" href="advanced-search.html">Advanced Search</a>
+        </div>
+        <div class="main container-fluid d-flex flex-column justify-content-center align-items-center">
+            <img class="p-2" src="googlelogo_color_272x92dp.png" alt="Google Logo">
+            <form action="https://google.com/search" class="container-fluid d-flex flex-column justify-content-center align-items-center">
+                <input class="query mb-2 p-3" type="text" name="q" autocomplete="off">
+                <div class="d-flex">
+                    <input class="btn m-3" role="button" type="submit" value="Google Search">
+                    <input class="btn m-3" role="button" name="btnI" type="submit" value="I’m Feeling Lucky">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

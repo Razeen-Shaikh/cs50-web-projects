@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Google Advanced Search</title>
+</head>
+<body>
+    <div class="container-fluid d-flex align-items-center justify-content-end">
+        <a class="p-2 m-3" href="index.html">Back to Google Search</a>
+    </div>
+    <div class="main container-fluid d-flex flex-column justify-content-start">
+        <h4>Advanced Search</h4>
+        <hr>
+        <form action="https://google.com/search" class="container-fluid col-7 d-flex flex-column justify-content-start">
+            <div class="row m-2">
+                <label class="col-3">all these words:</label>
+                <input class="col-9" type="text" name="as_q" autocomplete="off">
+            </div>
+            <div class="row m-2">
+                <label class="col-3">this exact word or phrase:</label>
+                <input class="col-9" type="text" name="as_epq">
+            </div>
+            <div class="row m-2">
+                <label class="col-3">any of these words:</label>
+                <input class="col-9" type="text" name="as_oq">
+            </div>
+            <div class="row m-2">
+                <label class="col-3">none of these words:</label>
+                <input class="col-9" type="text" name="as_eq">
+            </div>
+            <input class="d-block btn-primary mr-2 p-1" role="button" type="submit" value="Advanced Search">
+        </form>
+    </div>
+</body>
+</html>
