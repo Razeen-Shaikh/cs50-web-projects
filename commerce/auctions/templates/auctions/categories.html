@@ -1,0 +1,26 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+
+<h2>Categories</h2>
+
+<div class="container row mx-auto">
+    <ul>
+        <li>
+            <a class="d-block" href="{% url 'commerce:category' 'FA' %}">Fashion</a>
+        </li>
+        <li>
+            <a class="d-block" href="{% url 'commerce:category' 'TY' %}">Toys</a>
+        </li>
+        <li>
+            <a class="d-block" href="{% url 'commerce:category' 'EC' %}">Electronics</a>
+        </li>
+        <li>
+            <a class="d-block" href="{% url 'commerce:category' 'HM' %}">Home</a>
+        </li>
+        <li>
+            <a class="d-block" href="{% url 'commerce:category' 'OT' %}">Others</a>
+        </li>
+    </ul>
+</div>
+{% endblock %}

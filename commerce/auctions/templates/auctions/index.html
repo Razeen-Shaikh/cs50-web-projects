@@ -1,0 +1,28 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+
+{% if isWatchlist %}
+<h2>Watchlist</h2>
+{% else %}
+<h2>Active Listings</h2>
+{% endif %}
+
+<div class="container row mx-auto">
+    {% for auction in auctions %}
+    <div class="card m-2 col-4" style="width: 18rem;">
+        {% if auction.image %}
+        <img src={{ auction.image.url }} class="card-img-top" alt="Auction">
+        {% else %}
+        <img src={{ auction.image_url }} class="card-img-top" alt="Auction">
+        {% endif %}
+        <div class="card-body">
+            <h5 class="card-title">{{ auction.title }}</h5>
+            <p class="card-text">Created At: {{auction.created_at}}</p>
+            <p class="card-text">Price: Rs. {{ auction.starting_bid }}</p>
+            <a href="{% url 'commerce:auction' auction.title %}" class="btn btn-dark m-1">View</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+
+<h2>Winnings</h2>
+
+<div class="container row mx-auto">
+    {% for winning in winnings %}
+        <div class="card m-2 col-4" style="width: 18rem;">
+            <img src={{ winning.image.url }} class="card-img-top" alt="Auction Won">
+            <div class="card-body">
+                <h5 class="text-center">Congratulations You Won the Auction.</h5>
+                <h6 class="card-title text-center my-1">{{ winning.title }}</h6>
+                <p class="card-text text-center">For Price: Rs. {{ winning.price }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

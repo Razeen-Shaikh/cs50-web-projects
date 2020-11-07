@@ -1,0 +1,9 @@
+body {
+    padding: 10px;
+}
+img {
+    height: 200px;
+}
+.jumbotron img {
+    height: 400px;
+}

@@ -1,0 +1,16 @@
+{% extends "auctions/layout.html" %}
+{% load bootstrap4 %}
+
+{% block body %}
+    <h2>Create Listings</h2>
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+    <form class='container px-5' method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <button class='btn btn-dark' type='submit'>Save</button>
+    </form>
+
+{% endblock %}
